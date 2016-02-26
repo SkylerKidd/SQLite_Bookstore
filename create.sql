@@ -26,12 +26,28 @@ CREATE TABLE BOOK
 
 CREATE TABLE CUSTOMER
 (
-  CustomerID      CHAR(9)       NOT NULL,
-  CustomerFname   VARCHAR(15)	  NOT NULL,
+  Username        VARCHAR(15)   NOT NULL,
+  CustomerFname   VARCHAR(15),
   CustomerMI      CHAR,
-  CustomerLname   VARCHAR(15)	  NOT NULL,
+  CustomerLname   VARCHAR(15),
   Email           VARCHAR(20)   NOT NULL,
   CustPassword    VARCHAR(15)   NOT NULL,
   CustAddress     VARCHAR(30),
 	PRIMARY KEY(CustomerID)
 );
+
+CREATE TABLE SELLER
+(
+  Username        CHAR(9)       NOT NULL;
+  Company         VARCHAR();
+)
+
+CREATE TABLE TRANSACTION
+(
+
+)
+
+CREATE TABLE REVIEW
+(
+
+)
