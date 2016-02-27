@@ -38,6 +38,7 @@ CREATE TABLE CUSTOMER
 
 CREATE TABLE SELLER
 (
+<<<<<<< HEAD
   Username        CHAR(9)       NOT NULL;
   Company         VARCHAR();
 )
@@ -51,3 +52,24 @@ CREATE TABLE REVIEW
 (
 
 )
+=======
+  SellerID        CHAR(9)       NOT NULL,
+  SellerFname     VARCHAR(15)   NOT NULL,
+  SellerMI        CHAR,
+  SellerLname     VARCHAR(15)   NOT NULL,
+  Email           VARCHAR(20)   NOT NULL,
+  SellerPassword  VARCHAR(15)   NOT NULL,
+  Sellerddress    VARCHAR(30),
+  PRIMARY KEY(SellerID)
+);
+
+CREATE TABLE TRANSACTION
+(
+  ProductID       CHAR(9)   NOT NULL,
+  Price           INT       NOT NULL,
+  SellerID        CHAR      NOT NULL,
+  CustomerID      CHAR(9)   NOT NULL,
+  TranactionDate  DATE      NOT NULL,
+  FOREIGN KEY(ProductID)
+);
+>>>>>>> origin/master
