@@ -1,11 +1,12 @@
 .open BOOKSTORE.db
 
+drop table USER;
+drop table LOCATION;
 drop table BOOK;
-drop table CUSTOMER;
-drop table SELLER;
+drop table REVIEWER;
+drop table USER_REVIEW;
+drop table BOOK_REVIEW;
 drop table TRANSACTION;
-drop table REVIEW;
-drop table BOOK_CATEGORY;
 
 CREATE TABLE BOOK
 (
