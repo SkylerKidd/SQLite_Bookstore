@@ -10,52 +10,64 @@ drop table TRANSACTION;
 CREATE TABLE USER
 (
   Username        VARCHAR(15)   NOT NULL,
+  Email           VARCHAR(20)   NOT NULL,
+  Password        VARCHAR(15)   NOT NULL,
   Fname           VARCHAR(15),
   Minit           CHAR,
   Lname           VARCHAR(15),
-  Bday            DATE,
-  Email           VARCHAR(20)   NOT NULL,
-  Password        VARCHAR(15)   NOT NULL,
-  Address         VARCHAR(30),
-  PRIMARY KEY(CustomerID)
+  Bdate           DATE,
+  ZipCode         VARCHAR(5),
+  State           CHAR(2),
+  City            VARCHAR(15),
+  StAddress       VARCHAR(30),
+  PRIMARY KEY(Username)
 )
 
 CREATE TABLE LISTING
 (
-    
+  Seller          VARCHAR(15)   NOT NULL,
+  Book            CHAR(13)      NOT NULL,
+  Edition         VARCHAR(15)   NOT NULL,
+  Price           DECIMAL(4,2)  NOT NULL,
+  Quantity        INT,
+  PRIMARY KEY(Seller, Book, Edition)
 )
 
 CREATE TABLE BOOK
 (
-  ISBN            CHAR(10)      NOT NULL,
+  ISBN            CHAR(13)      NOT NULL,
+  ISSN            CHAR(8),
   Title           VARCHAR(50)   NOT NULL,
-  InventoryAmount INT,
-  Price           DECIMAL(4,2)  NOT NULL,
-  CategoryC       INT,
-  AuthorFname     VARCHAR(30)   NOT NULL,
-  AuthorLname     VARCHAR(15)   NOT NULL,
+  AuthorName      VARCHAR(30)   NOT NULL,
   --Description	    VARCHAR(100)	NOT NULL,
-  AvgRating       INT check (AvgRating >= 1 OR AvgRating <=5),
-  PRIMARY KEY(ISBN),
+  PRIMARY KEY(ISBN)
 )
 
 CREATE TABLE USER_REVIEW
 (
-    
+  Reviewer        VARCHAR(15)   NOT NULL,
+  Reviewee        VARCHAR(15)   NOT NULL,
+  Reviewee        VARCHAR(120),
+  Rating          INT           NOT NULL,
+  PRIMARY KEY(Reviewer, Reviewee)
 )
 
 CREATE TABLE BOOK_REVIEW
 (
-    
+  Reviewer        VARCHAR(15)   NOT NULL,
+  Book            CHAR(10)      NOT NULL,
+  Reviewee        VARCHAR(120),
+  Rating          INT           NOT NULL,
+  PRIMARY KEY(Reviewer, Book)
 )
 
 CREATE TABLE TRANSACTION
 (
-  ProductID       CHAR(9)   NOT NULL,
-  Price           INT       NOT NULL,
-  SellerID        CHAR      NOT NULL,
-  CustomerID      CHAR(9)   NOT NULL,
-  TranactionDate  DATE      NOT NULL,
-  FOREIGN KEY(ProductID)
+  BuyerUN         VARCHAR(15)   NOT NULL,
+  SellerUN        VARCHAR(15)   NOT NULL,
+  BookID          CHAR(13)      NOT NULL,
+  Edition         VARCHAR(15)   NOT NULL,
+  DateTime        INTEGER       NOT NULL,
+  PRIMARY KEY(BuyerUN, SellerUN, BookID, Edition, DateTime)
 );
 
