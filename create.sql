@@ -26,7 +26,7 @@ CREATE TABLE USER
 CREATE TABLE BOOK
 (
   ISBN            CHAR(13)      NOT NULL,
-  ISSN            CHAR(8),
+  Edition         VARCHAR(15),
   Title           VARCHAR(50)   NOT NULL,
   AuthorName      VARCHAR(30)   NOT NULL,
   --Description	    VARCHAR(100)	NOT NULL,
