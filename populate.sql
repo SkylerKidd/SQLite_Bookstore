@@ -1,13 +1,14 @@
 .open BOOKSTORE.db
 
 -- USER INSERTS
-INSERT INTO USER VALUES();
-
--- LISTING INSERTS
-INSERT INTO LISTING VALUES();
+INSERT INTO USER VALUES('skyler','f.s.kidd@gmail.com','p@ssw0rd','Frank','S','Kidd','1995-02-10','98011','WA','Bothell','1234 Steeterson Street');
+INSERT INTO USER VALUES('testerT','tester@example.com','12341234','Test','R','Testerson','1990-06-23','90210','WA','Beverly Hills','555 Richguy Blvd');
 
 -- BOOK INSERTS
 INSERT INTO BOOK VALUES();
+
+-- LISTING INSERTS
+INSERT INTO LISTING VALUES();
 
 -- USER_REVIEW INSERTS
 INSERT INTO USER_REVIEW VALUES();
