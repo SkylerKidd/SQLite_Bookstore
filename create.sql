@@ -1,7 +1,7 @@
 .open BOOKSTORE.db
 
 drop table USER;
-drop table LISTING
+drop table LISTING;
 drop table BOOK;
 drop table USER_REVIEW;
 drop table BOOK_REVIEW;
@@ -20,7 +20,7 @@ CREATE TABLE USER
   State           CHAR(2),
   City            VARCHAR(15),
   StAddress       VARCHAR(30),
-  PRIMARY KEY(Username)
+  CONSTRAINT PRIMARY KEY(Username)
 )
 
 CREATE TABLE LISTING
@@ -30,8 +30,8 @@ CREATE TABLE LISTING
   Edition         VARCHAR(15)   NOT NULL,
   Price           DECIMAL(4,2)  NOT NULL,
   Quantity        INT,
-  CONSTRAINT PRIMARY KEY(Seller, Book, Edition)
-  CONSTRAINT FOREIGN KEY(Book,Edition) references BOOK on update cascade on delete set null 
+  CONSTRAINT PRIMARY KEY(Seller, Book, Edition),
+  CONSTRAINT FOREIGN KEY(Book) references BOOK on update cascade on delete set null,
   CONSTRAINT FOREIGN KEY(Seller) references USER ​on update cascade on delete set null
 )
 
@@ -49,10 +49,11 @@ CREATE TABLE USER_REVIEW
 (
   Reviewer        VARCHAR(15)   NOT NULL,
   Reviewee        VARCHAR(15)   NOT NULL,
-  Reviewee        VARCHAR(120),
+  Review          VARCHAR(120),
   Rating          INT           NOT NULL,
-  CONSTRAINT PRIMARY KEY(Reviewer, Reviewee)
-  CONSTRAINT FOREIGN KEY(Reviewer,Reviewee) references USER ​on update cascade on delete set null
+  CONSTRAINT PRIMARY KEY(Reviewer, Reviewee),
+  CONSTRAINT FOREIGN KEY(Reviewer) references USER ​on update cascade on delete set null
+  CONSTRAINT FOREIGN KEY(Reviewee) references USER ​on update cascade on delete set null
 )
 
 CREATE TABLE BOOK_REVIEW
@@ -61,8 +62,9 @@ CREATE TABLE BOOK_REVIEW
   Book            CHAR(10)      NOT NULL,
   Reviewee        VARCHAR(120),
   Rating          INT           NOT NULL,
-  CONSTRAINT PRIMARY KEY(Reviewer, Book)
-  CONSTRAINT FOREIGN KEY(Reviewer,Reviewee) references USER ​on update cascade on delete set null
+  CONSTRAINT PRIMARY KEY(Reviewer, Book),
+  CONSTRAINT FOREIGN KEY(Reviewer) references USER ​on update cascade on delete set null
+  CONSTRAINT FOREIGN KEY(Book) references BOOK ​on update cascade on delete set null
 )
 
 CREATE TABLE TRANSACTION
@@ -72,8 +74,8 @@ CREATE TABLE TRANSACTION
   BookID          CHAR(13)      NOT NULL,
   Edition         VARCHAR(15)   NOT NULL,
   DateTime        INTEGER       NOT NULL,
-  PRIMARY KEY(BuyerUN, SellerUN, BookID, Edition, DateTime)
-  CONSTRAINT FOREIGN KEY(BuyerUN,SellerUN) references USER ​on update cascade on delete set null
-  CONSTRAINT FOREIGN KEY(BookID,Edition) references BOOK ​on update cascade on delete set null
+  CONSTRAINT PRIMARY KEY(BuyerUN, SellerUN, BookID, Edition, DateTime),
+  CONSTRAINT FOREIGN KEY(BuyerUN) references USER ​on update cascade on delete set null,
+  CONSTRAINT FOREIGN KEY(SellerUN,BookID,Edition) references LISTING ​on update cascade on delete set null
 );
 
