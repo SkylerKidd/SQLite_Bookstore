@@ -25,7 +25,7 @@ CREATE TABLE USER
 
 CREATE TABLE BOOK
 (
-  ISBN            CHAR(13)      NOT NULL,
+  ISBN            CHAR(14)      NOT NULL,
   Edition         VARCHAR(15),
   Title           VARCHAR(50)   NOT NULL,
   AuthorName      VARCHAR(30)   NOT NULL,
@@ -36,7 +36,7 @@ CREATE TABLE BOOK
 CREATE TABLE LISTING
 (
   Seller          VARCHAR(15)   NOT NULL,
-  Book            CHAR(13)      NOT NULL,
+  Book            CHAR(14)      NOT NULL,
   Price           DECIMAL(4,2)  NOT NULL,
   Quantity        INT,
   CONSTRAINT PRIMARY KEY(Seller, Book),
@@ -48,7 +48,7 @@ CREATE TABLE USER_REVIEW
 (
   Reviewer        VARCHAR(15)   NOT NULL,
   Reviewee        VARCHAR(15)   NOT NULL,
-  Review          VARCHAR(120),
+  Review          TEXT,
   Rating          INT           NOT NULL,
   CONSTRAINT PRIMARY KEY(Reviewer, Reviewee),
   CONSTRAINT FOREIGN KEY(Reviewer) references USER ​on update cascade on delete set null
@@ -58,8 +58,8 @@ CREATE TABLE USER_REVIEW
 CREATE TABLE BOOK_REVIEW
 (
   Reviewer        VARCHAR(15)   NOT NULL,
-  Book            CHAR(10)      NOT NULL,
-  Reviewee        VARCHAR(120),
+  Book            CHAR(14)      NOT NULL,
+  Reviewee        TEXT,
   Rating          INT           NOT NULL,
   CONSTRAINT PRIMARY KEY(Reviewer, Book),
   CONSTRAINT FOREIGN KEY(Reviewer) references USER ​on update cascade on delete set null
@@ -70,8 +70,8 @@ CREATE TABLE TRANSACTION
 (
   BuyerUN         VARCHAR(15)   NOT NULL,
   SellerUN        VARCHAR(15)   NOT NULL,
-  BookID          CHAR(13)      NOT NULL,
-  DateTime        INTEGER       NOT NULL,
+  BookID          CHAR(14)      NOT NULL,
+  DateTime        TEXT          NOT NULL,
   CONSTRAINT PRIMARY KEY(BuyerUN, SellerUN, BookID, DateTime),
   CONSTRAINT FOREIGN KEY(BuyerUN) references USER ​on update cascade on delete set null,
   CONSTRAINT FOREIGN KEY(SellerUN,BookID) references LISTING ​on update cascade on delete set null
