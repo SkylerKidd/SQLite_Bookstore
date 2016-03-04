@@ -59,7 +59,7 @@ CREATE TABLE BOOK_REVIEW
 (
   Reviewer        VARCHAR(15)   NOT NULL,
   Book            CHAR(14)      NOT NULL,
-  Reviewee        TEXT,
+  Reviewe         TEXT,
   Rating          INT           NOT NULL,
   PRIMARY KEY(Reviewer, Book),
   FOREIGN KEY(Reviewer) references USER(Username),
