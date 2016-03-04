@@ -2,6 +2,8 @@
 An example SQLite implementation of an Online Bookstore
 
 ## Setup
+
+#### SQLite
 Make sure you have [SQLite](https://www.sqlite.org/download.html) installed.
 
 #### Webpage
@@ -10,5 +12,9 @@ Then install [Flask](http://flask.pocoo.org/docs/0.10/installation/#installation
 
 ## Usage
 
+#### SQLite
+Run ```sqlite3``` to open up the SQLite shell.
+Run ```.read create.sql``` to create the tables and then ```.read populate.sql``` to insert the dummy data.
+
 #### Webpage
-Run ```$ python views.py``` and navigate to the provided link. (Probably (127.0.0.1:5000)[http://127.0.0.1:5000/])
+Run ```python views.py``` and navigate to the provided link. (Probably (127.0.0.1:5000)[http://127.0.0.1:5000/])
