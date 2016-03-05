@@ -1,6 +1,27 @@
 -- USER INSERTS
 INSERT INTO USER VALUES('skyler','f.s.kidd@gmail.com','p@ssw0rd','Frank','S','Kidd','1995-02-10','98011','WA','Bothell','1234 Steeterson Street');
 INSERT INTO USER VALUES('testerT','tester@example.com','12341234','Test','R','Testerson','1990-06-23','90210','WA','Beverly Hills','555 Richguy Blvd');
+INSERT INTO USER VALUES('smithg','smithg@yahoo.com','11112222','John','R','Smith','1995-06-21','40712','FL','Orlando','85 Maple Tree Blvd');
+INSERT INTO USER VALUES('AliG','alitheg@gmail.com','55556666','Ali','D','Gee','1985-03-23','40715','FL','Daytona Beach','18 Breakers Ave');
+INSERT INTO USER VALUES('jamesB','jamesbb@hotmail.com','15151616','James','R','Brown','1950-06-06','90210','LA','Beverly Hills','100 Jetset Blvd');
+INSERT INTO USER VALUES('jackson5','mjackson@gmail.com','1111111','Michael','NULL','Jackson','1958-08-29','90210','LA','Beverly Hills','1050 Musicguy Blvd');
+INSERT INTO USER VALUES('bieber','justinb@gmail.com','66666666','Justin','NULL','Bieber','1994-03-01','90210','LA','Beverly Hills','888 Neverever Blvd');
+INSERT INTO USER VALUES('ross','rossgeller@yahoo.com','ross1111','David','R','Schwimmer','1970-06-20','10026','NY','Manhattan','94 Friends Street');
+INSERT INTO USER VALUES('sia','sia@gmail.com','00001111','Sia','NULL','Lebouf','1983-07-20','90210','LA','Beverly Hills','102 Sohandsome Blvd');
+INSERT INTO USER VALUES('sheldor','sheldonc@gmail.com','81688834','Sheldon','NULL','Cooper','1985-01-23','90210','LA','Beverly Hills','314 Geekyguy Blvd');
+INSERT INTO USER VALUES('amyf','amy@gmail.com','amyffamy','Amy','F','Fowler','1985-05-05','90211','LA','Beverly Hills','815 Smarty Blvd');
+INSERT INTO USER VALUES('bob','marleyb@hotmail.com','3333marl','Bob','M','Marley','1940-01-01','90210','LA','Malibu','111 Sunshine Street');
+INSERT INTO USER VALUES('youknownothing','johnsnow@gmail.com','iknow111','John','K','Snow','1955-01-02','100011','NY','Brooklyn','123 Nobody Blvd');
+INSERT INTO USER VALUES('kelly','kelly@gmail.com','kl818111','Kelly','S','John','1990-11-10','98120','WA','Bellevue','82 Nicecy Blvd');
+INSERT INTO USER VALUES('elleng','deg@gmail.com','ellensm1','Ellen','D','Generes','1962-10-10','90210','WA','Beverly Hills','12 Myshow Blvd');
+INSERT INTO USER VALUES('Obama','care@gmail.com','power123','Barack','H','Obama','1961-08-04','20500','DC','Beverly Hills','1600 Pennsylvania Ave. NW');
+INSERT INTO USER VALUES('queenb','beyonce@gmail.com','0b0b0b0b','Beyonce','R','Carter','1984-11-11','90210','LA','Beverly Hills','1050 Queenb Blvd');
+INSERT INTO USER VALUES('selent','selengt@gmail.com','12341111','Selen','NULL','Taskin','1981-03-07','98121','WA','Seattle','81 Clay Street');
+INSERT INTO USER VALUES('gokayt','gokaytaskin@gmail.com','99999999','Gokay','NULL','Taskin','1982-07-21','98121','WA','Seattle','81 Clay Street');
+INSERT INTO USER VALUES('minc','theinstructor@gmail.com','uwbuwb11','Min','T','Chen','1985-01-02','98011','WA','Bothell','198 Beardslee Blvd');
+INSERT INTO USER VALUES('scott','scottth@hotmail.com','scotty01','Scott','M','Madeup','1982-07-07','98121','WA','Seattle','181 Whatever Street');
+INSERT INTO USER VALUES('penny','pennyme@gmail.com','bigbang1','Penny','M','Brown','1987-07-28','98121','LA','Pasadena','1020 Cheesecake Ave. SW');
+
 
 -- BOOK INSERTS
 INSERT INTO BOOK VALUES('978-0385743563','Hardcover','Steelheart','Brandon Sanderson');
