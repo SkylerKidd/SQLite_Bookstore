@@ -176,7 +176,7 @@ INSERT INTO BOOK_REVIEW VALUES('Obama','978-1507704530','so good','4');
 INSERT INTO BOOK_REVIEW VALUES('ross','978-1496400802','bored','2');
 INSERT INTO BOOK_REVIEW VALUES('elleng','978-0062413864','too confusing','2');
 INSERT INTO BOOK_REVIEW VALUES('elleng','9978-0062315007','very good','5');
-INSERT INTO BOOK_REVIEW VALUES('scott','9978-0062315007','I don't like it at all','1');
+INSERT INTO BOOK_REVIEW VALUES('scott','9978-0062315007','I do not like it at all','1');
 INSERT INTO BOOK_REVIEW VALUES('scott','978-0812988406','not very interesting','3');
 INSERT INTO BOOK_REVIEW VALUES('queenb','978-0812988406','the best book ever','5');
 INSERT INTO BOOK_REVIEW VALUES('queenb','978-1616203221','worst book ever','1');
