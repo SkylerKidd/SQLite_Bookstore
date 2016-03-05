@@ -17,4 +17,4 @@ Run ```sqlite3``` to open up the SQLite shell.
 Run ```.read create.sql``` to create the tables and then ```.read populate.sql``` to insert the dummy data.
 
 #### Webpage
-Run ```python views.py``` and navigate to the provided link. (Probably (127.0.0.1:5000)[http://127.0.0.1:5000/])
+Run ```python views.py``` and navigate to the provided link. (Probably [127.0.0.1:5000](http://127.0.0.1:5000/))
