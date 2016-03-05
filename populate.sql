@@ -34,16 +34,26 @@ INSERT INTO BOOK VALUES('978-0547577319','Paperback','A Long Walk to Water','Lin
 INSERT INTO BOOK VALUES('978-0062315007','Paperback','The Alchemist','Paulo Coelho');
 INSERT INTO BOOK VALUES('978-0451419910','Paperback','A Fall of Marigolds','Susan Meissner');
 INSERT INTO BOOK VALUES('978-0062413864','Paperback','What She Knew','Gilly Macmillan');
-INSERT INTO BOOK VALUES('','','','');
-INSERT INTO BOOK VALUES('','','','');
-INSERT INTO BOOK VALUES('','','','');
-INSERT INTO BOOK VALUES('','','','');
-INSERT INTO BOOK VALUES('','','','');
-INSERT INTO BOOK VALUES('','','','');
-INSERT INTO BOOK VALUES('','','','');
-INSERT INTO BOOK VALUES('','','','');
-INSERT INTO BOOK VALUES('','','','');
-INSERT INTO BOOK VALUES('','','','');
+INSERT INTO BOOK VALUES('978-1594634475','Hardcover','Fates and Furies','Lauren Groff');
+INSERT INTO BOOK VALUES('978-1476733951','Paperback','Wool','Hugh Howey');
+INSERT INTO BOOK VALUES('978-0758278432','Paperback','The Plum Tree','Ellen M. Wiseman');
+INSERT INTO BOOK VALUES('978-0451466693','Paperback','Flight of the Sparrow','Amy B. Brown');
+INSERT INTO BOOK VALUES('978-1496400802','Paperback','Secrets She Kept','Cathy Gohlke');
+INSERT INTO BOOK VALUES('978-0061950728','Paperback','Orphan Train','Christina B. Kline');
+INSERT INTO BOOK VALUES('978-0425261019','Paperback','Let Us Pretend This Never Happened','Jenny Lawson');
+INSERT INTO BOOK VALUES('978-1501106477','Paperback','Brooklyn','Colm Toibin');
+INSERT INTO BOOK VALUES('978-0989866217','Paperback','Miracle Man','William R Leibowitz');
+INSERT INTO BOOK VALUES('978-0385376716','Hardcover','The Wonderful Things You Will Be','Emily W. Martin');
+INSERT INTO BOOK VALUES('978-1250095893','Hardcover','Boys in the Trees','Carly Simon');
+INSERT INTO BOOK VALUES('978-0316380867','Hardcover','The Thing About Jellyfish','Ali Benjamin');
+INSERT INTO BOOK VALUES('978-0316225885','Hardcover','The Crossing','Michael Connelly');
+INSERT INTO BOOK VALUES('978-1455581153','Paperback','Mean Streak','Sandra Brown');
+INSERT INTO BOOK VALUES('978-1476728742','Hardcover','The Wright Brothers','David McCullough');
+INSERT INTO BOOK VALUES('978-1476761671','Paperback','Before I Go','Colleen Oakley');
+INSERT INTO BOOK VALUES('978-1476738024','Paperback','A Man Called Ove','Fredrik Backman');
+INSERT INTO BOOK VALUES('978-1455559817','Paperback','Memory Man','David Baldacci');
+INSERT INTO BOOK VALUES('978-0425247440','Paperback','What Alice Forgot','Liane Moriarty');
+INSERT INTO BOOK VALUES('978-1503950252','Paperback','The Short Drop','Matthew FitzSimmons');
 
 
 -- LISTING INSERTS
