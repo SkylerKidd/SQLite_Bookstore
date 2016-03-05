@@ -145,9 +145,48 @@ INSERT INTO LISTING VALUES('penny','978-1503950252','11.99','11');
 
 -- USER_REVIEW INSERTS
 INSERT INTO USER_REVIEW (Reviewer, Reviewee, Rating) VALUES('skyler', 'testerT', '4');
+INSERT INTO USER_REVIEW (Reviewer, Reviewee, Rating) VALUES('smithg', 'selent', '5');
+INSERT INTO USER_REVIEW (Reviewer, Reviewee, Rating) VALUES('Obama', 'bob', '4');
+INSERT INTO USER_REVIEW (Reviewer, Reviewee, Rating) VALUES('ross', 'sia', '4');
+INSERT INTO USER_REVIEW (Reviewer, Reviewee, Rating) VALUES('amyf', 'selent', '5');
+INSERT INTO USER_REVIEW (Reviewer, Reviewee, Rating) VALUES('Obama', 'minc', '4');
+INSERT INTO USER_REVIEW (Reviewer, Reviewee, Rating) VALUES('queenb', 'penny', '3');
+INSERT INTO USER_REVIEW (Reviewer, Reviewee, Rating) VALUES('scott', 'minc', '4');
+INSERT INTO USER_REVIEW (Reviewer, Reviewee, Rating) VALUES('scott', 'sia', '2');
+INSERT INTO USER_REVIEW (Reviewer, Reviewee, Rating) VALUES('ross', 'minc', '4');
+INSERT INTO USER_REVIEW (Reviewer, Reviewee, Rating) VALUES('skyler', 'bob', '3');
+INSERT INTO USER_REVIEW (Reviewer, Reviewee, Rating) VALUES('youknownothing', 'penny', '2');
+INSERT INTO USER_REVIEW (Reviewer, Reviewee, Rating) VALUES('skyler', 'minc', '5');
+INSERT INTO USER_REVIEW (Reviewer, Reviewee, Rating) VALUES('elleng', 'selent', '4');
+INSERT INTO USER_REVIEW (Reviewer, Reviewee, Rating) VALUES('elleng', 'bob', '3');
+INSERT INTO USER_REVIEW (Reviewer, Reviewee, Rating) VALUES('elleng', 'penny', '4');
+INSERT INTO USER_REVIEW (Reviewer, Reviewee, Rating) VALUES('skyler', 'penny', '4');
+INSERT INTO USER_REVIEW (Reviewer, Reviewee, Rating) VALUES('ross', 'penny', '4');
+INSERT INTO USER_REVIEW (Reviewer, Reviewee, Rating) VALUES('amyf', 'jackson5', '4');
 
 -- BOOK_REVIEW INSERTS
 INSERT INTO BOOK_REVIEW VALUES('skyler','978-0385743563','Best book ever, OMG.','5');
+INSERT INTO BOOK_REVIEW VALUES('skyler','978-0385743563','Best book ever, OMG.','5');
+INSERT INTO BOOK_REVIEW VALUES('smithg','978-1503950252','Not very interesting.','3');
+INSERT INTO BOOK_REVIEW VALUES('ross','978-1503950252','Love it','5');
+INSERT INTO BOOK_REVIEW VALUES('skyler','978-1503950252','fascinating','5');
+INSERT INTO BOOK_REVIEW VALUES('ross','978-1503950252','Hate it','2');
+INSERT INTO BOOK_REVIEW VALUES('Obama','978-0316225885','Interesting subject','4');
+INSERT INTO BOOK_REVIEW VALUES('Obama','978-1507704530','so good','4');
+INSERT INTO BOOK_REVIEW VALUES('ross','978-1496400802','bored','2');
+INSERT INTO BOOK_REVIEW VALUES('elleng','978-0062413864','too confusing','2');
+INSERT INTO BOOK_REVIEW VALUES('elleng','9978-0062315007','very good','5');
+INSERT INTO BOOK_REVIEW VALUES('scott','9978-0062315007','I don't like it at all','1');
+INSERT INTO BOOK_REVIEW VALUES('scott','978-0812988406','not very interesting','3');
+INSERT INTO BOOK_REVIEW VALUES('queenb','978-0812988406','the best book ever','5');
+INSERT INTO BOOK_REVIEW VALUES('queenb','978-1616203221','worst book ever','1');
+INSERT INTO BOOK_REVIEW VALUES('amyf','978-1616203221','amazing book','5');
+INSERT INTO BOOK_REVIEW VALUES('amyf','978-0451419910','nice book','3');
+INSERT INTO BOOK_REVIEW VALUES('smithg','978-1455581153','it is the best book I have ever read','5');
+INSERT INTO BOOK_REVIEW VALUES('AliG','978-1455581153','so boring','2');
+INSERT INTO BOOK_REVIEW VALUES('AliG','978-1476761671','too long to read','1');
+INSERT INTO BOOK_REVIEW VALUES('smithg','978-1476761671','interesting story','3');
+
 
 -- TRANSACTION INSERTS
 INSERT INTO TRANSACT VALUES('skyler','testerT','978-1616203221','2016-03-03 17:16:03.234');
