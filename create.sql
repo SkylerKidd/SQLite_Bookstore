@@ -29,7 +29,6 @@ CREATE TABLE BOOK
   Edition         VARCHAR(15),
   Title           VARCHAR(50)   NOT NULL,
   AuthorName      VARCHAR(30)   NOT NULL,
-  --Description	    VARCHAR(100)	NOT NULL,
   PRIMARY KEY(ISBN)
 );
 
@@ -41,8 +40,8 @@ CREATE TABLE LISTING
   Quantity        INT,
   CHECK 		  (Quantity >= 0),
   PRIMARY KEY(Seller, Book),
-  FOREIGN KEY(Book) references BOOK(ISBN),
-  FOREIGN KEY(Seller) references USER(Username)
+  FOREIGN KEY(Book) references BOOK(ISBN) on update cascade,
+  FOREIGN KEY(Seller) references USER(Username)on update cascade on delete restrict
 );
 
 CREATE TABLE USER_REVIEW
@@ -51,9 +50,10 @@ CREATE TABLE USER_REVIEW
   Reviewee        VARCHAR(15)   NOT NULL,
   Review          TEXT,
   Rating          INT           NOT NULL,
+  CHECK 		  (Rating >= 1 OR Rating <= 5),
   PRIMARY KEY(Reviewer, Reviewee),
-  FOREIGN KEY(Reviewer) references USER(Username),
-  FOREIGN KEY(Reviewee) references USER(Username)
+  FOREIGN KEY(Reviewer) references USER(Username) on update   cascade,
+  FOREIGN KEY(Reviewee) references USER(Username)on update cascade
 );
 
 CREATE TABLE BOOK_REVIEW
@@ -62,9 +62,10 @@ CREATE TABLE BOOK_REVIEW
   Book            CHAR(14)      NOT NULL,
   Review          TEXT,
   Rating          INT           NOT NULL,
+  CHECK 		  (Rating >= 1 OR Rating <= 5),
   PRIMARY KEY(Reviewer, Book),
-  FOREIGN KEY(Reviewer) references USER(Username),
-  FOREIGN KEY(Book) references BOOK(ISBN)
+  FOREIGN KEY(Reviewer) references USER(Username)on update cascade,
+  FOREIGN KEY(Book) references BOOK(ISBN) on update cascade
 );
 
 CREATE TABLE TRANSACT
@@ -74,7 +75,7 @@ CREATE TABLE TRANSACT
   BookID          CHAR(14)      NOT NULL,
   DateTime        TEXT          NOT NULL,
   PRIMARY KEY(BuyerUN, SellerUN, BookID, DateTime),
-  FOREIGN KEY(BuyerUN) references USER(Username),
-  FOREIGN KEY(SellerUN,BookID) references LISTING(Seller, Book)
+  FOREIGN KEY(BuyerUN) references USER(Username) on update cascade on delete restrict,
+  FOREIGN KEY(SellerUN,BookID) references LISTING(Seller, Book) on update cascade on delete restrict
 );
 
