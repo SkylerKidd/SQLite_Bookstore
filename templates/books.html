@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<title>Books</title>
+<div class="page">
+    <h1>Books!</h1>
+    <div>
+        {% for book in books %}
+        <p>{{ book['ISBN'] }} has the title {{ book['Title'] }}</p>
+        {% endfor %}
+    </div>
+</div>
