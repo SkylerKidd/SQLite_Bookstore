@@ -39,6 +39,7 @@ CREATE TABLE LISTING
   Book            CHAR(14)      NOT NULL,
   Price           DECIMAL(4,2)  NOT NULL,
   Quantity        INT,
+  CHECK 		  (Quantity >= 0),
   PRIMARY KEY(Seller, Book),
   FOREIGN KEY(Book) references BOOK(ISBN),
   FOREIGN KEY(Seller) references USER(Username)
