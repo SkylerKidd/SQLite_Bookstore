@@ -37,7 +37,7 @@ def show_books():
 def show_history(user=None):
     sold_query = 'select * from transact, listing where SellerUN=Seller and BookID=Book and SellerUN="'+str(user)+'"'
     bought_query = 'select * from transact, listing where SellerUN=Seller and BookID=Book and BuyerUN="'+str(user)+'"'
-    userInfo = query_db('select * from user where Username="'+str(user)+'"')
+    userInfo = query_db('select * from user where Username="'+str(user)+'"')[0]
     sold = query_db(sold_query)
     bought = query_db(bought_query)
     return render_template('history.html', sold=sold, bought=bought, userInfo=userInfo)
