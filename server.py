@@ -35,9 +35,9 @@ def show_books():
 
 @app.route('/<user>/history/')
 def show_history(user=None):
-    sold_query = 'select * from transact, listing where SellerUN=Seller and BookID=Book and SellerUN="'+str(user)+'"'
-    bought_query = 'select * from transact, listing where SellerUN=Seller and BookID=Book and BuyerUN="'+str(user)+'"'
-    userInfo = query_db('select * from user where Username="'+str(user)+'"')[0]
+    sold_query = 'select * from transact, listing, book where Book=ISBN and SellerUN=Seller and BookID=Book and SellerUN="'+str(user)+'"'
+    bought_query = 'select * from transact, listing, book where Book=ISBN and SellerUN=Seller and BookID=Book and BuyerUN="'+str(user)+'"'
+    userInfo = query_db('select * from user where Username="'+str(user)+'"')[0] # Query returns an array, so I have to grab the 0th (only) index to use it.
     sold = query_db(sold_query)
     bought = query_db(bought_query)
     return render_template('history.html', sold=sold, bought=bought, userInfo=userInfo)

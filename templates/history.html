@@ -3,11 +3,28 @@
 <div class="page">
     <h1>Transaction History for {{ userInfo['Fname'] }} {{ userInfo['Lname'] }}</h1>
     <div>
-
-        <div>
-
-        </div>
+        <h2>Books Sold</h2>
+        {% for item in sold %}
         <hr>
-
+        <div>
+            <b>Title:</b> {{ item['Title'] }}<br>
+            <b>Buyer:</b> {{ item['BuyerUN'] }}<br>
+            <b>Price:</b> ${{ item['Price'] }}
+        </div>
+        {% endfor %}
+        <hr>
+    </div>
+    <br><br><br>
+    <div>
+        <h2>Books Bought</h2>
+        {% for item in bought %}
+        <hr>
+        <div>
+            <b>Title:</b> {{ item['Title'] }}<br>
+            <b>Seller:</b> {{ item['SellerUN'] }}<br>
+            <b>Price:</b> ${{ item['Price'] }}
+        </div>
+        {% endfor %}
+        <hr>
     </div>
 </div>
