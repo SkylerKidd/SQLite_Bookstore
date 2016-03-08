@@ -28,9 +28,9 @@ def index():
     
 @app.route('/books/')
 def show_books():
-    # for book in query_db('select * from book;'):
-    #     print book['ISBN'], 'has the title', book['Title']
     books = query_db('select * from book;')
+    # for book in books:
+    #     print book['ISBN'], 'has the title', book['Title']
     return render_template('books.html', books=books)
 
 if __name__ == '__main__':

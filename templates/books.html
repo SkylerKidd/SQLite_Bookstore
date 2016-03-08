@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <title>Books</title>
 <div class="page">
-    <h1>Books!</h1>
+    <h1>Books</h1>
     <div>
         {% for book in books %}
-        <p>{{ book['ISBN'] }} has the title {{ book['Title'] }}</p>
+        <div>
+            <h3>{{ book['Title'] }} ({{ book['Edition'] }})</h3>
+            <b>IBSN:</b> {{ book['ISBN'] }}<br>
+            <b>Author:</b> {{ book['AuthorName'] }}
+            <br><br>
+        </div>
+        <hr>
         {% endfor %}
     </div>
 </div>
