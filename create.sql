@@ -41,7 +41,7 @@ CREATE TABLE LISTING
   CHECK 		  (Quantity >= 0),
   PRIMARY KEY(Seller, Book),
   FOREIGN KEY(Book) references BOOK(ISBN) on update cascade,
-  FOREIGN KEY(Seller) references USER(Username)on update cascade on delete restrict
+  FOREIGN KEY(Seller) references USER(Username) on update cascade on delete restrict
 );
 
 CREATE TABLE USER_REVIEW
@@ -52,8 +52,8 @@ CREATE TABLE USER_REVIEW
   Rating          INT           NOT NULL,
   CHECK 		  (Rating >= 1 OR Rating <= 5),
   PRIMARY KEY(Reviewer, Reviewee),
-  FOREIGN KEY(Reviewer) references USER(Username) on update   cascade,
-  FOREIGN KEY(Reviewee) references USER(Username)on update cascade
+  FOREIGN KEY(Reviewer) references USER(Username) on update cascade,
+  FOREIGN KEY(Reviewee) references USER(Username) on update cascade
 );
 
 CREATE TABLE BOOK_REVIEW
@@ -64,7 +64,7 @@ CREATE TABLE BOOK_REVIEW
   Rating          INT           NOT NULL,
   CHECK 		  (Rating >= 1 OR Rating <= 5),
   PRIMARY KEY(Reviewer, Book),
-  FOREIGN KEY(Reviewer) references USER(Username)on update cascade,
+  FOREIGN KEY(Reviewer) references USER(Username) on update cascade,
   FOREIGN KEY(Book) references BOOK(ISBN) on update cascade
 );
 
