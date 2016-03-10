@@ -42,5 +42,10 @@ def show_history(user=None):
     bought = query_db(bought_query)
     return render_template('history.html', sold=sold, bought=bought, userInfo=userInfo)
 
+@app.route('/<user>/')
+def show_profile(user=None):
+    userInfo = query_db('select * from user where Username="'+str(user)+'"')[0]
+    return render_template('profile.html', userInfo=userInfo)
+    
 if __name__ == '__main__':
     app.run(debug=True)
